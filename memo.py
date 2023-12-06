@@ -122,7 +122,7 @@ def post_new_memo():
 
 @app.route('/health', methods=['GET'])
 def health_check():
-    return jsonify({'status': 'ok'}), 200
+    return '', HTTPStatus.OK
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=8000, debug=True)
